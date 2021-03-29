@@ -1,4 +1,5 @@
 # my-aws
+[![CircleCI](https://circleci.com/gh/shirakiya/my-aws.svg?style=svg)](https://circleci.com/gh/shirakiya/my-aws)  
 A management repo for my AWS accounts
 
 ## Setup
