@@ -1,0 +1,14 @@
+version: 2.1
+orbs:
+  terraform: circleci/terraform@1.2.0
+workflows:
+  version: 2
+  code_check:
+    jobs:
+      - terraform/fmt:
+          checkout: true
+          path: src/
+      - terraform/validate:
+          checkout: true
+          backend: false
+          path: src/
