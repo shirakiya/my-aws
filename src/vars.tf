@@ -9,3 +9,9 @@ variable "torii_email" {
   description = "Email for account of 'torii'"
   sensitive   = true
 }
+
+variable "akashi_button_email" {
+  type        = string
+  description = "Email for account of 'akashi-button'"
+  sensitive   = true
+}
