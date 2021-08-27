@@ -7,7 +7,7 @@ jobs:
   fmt:
     executor:
       name: terraform/default
-      image: hashicorp/terraform:1.0.5
+      tag: 1.0.5
     steps:
       - checkout
       - terraform/fmt:
@@ -16,7 +16,7 @@ jobs:
   validate:
     executor:
       name: terraform/default
-      image: hashicorp/terraform:1.0.5
+      tag: 1.0.5
     steps:
       - checkout
       - terraform/init:
