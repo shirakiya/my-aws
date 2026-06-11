@@ -1,4 +1,4 @@
-RUN_CONTEXT ?= docker-compose run --rm
+RUN_CONTEXT ?= docker compose run --rm
 
 init:
 	$(RUN_CONTEXT) terraform init
