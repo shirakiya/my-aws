@@ -8,3 +8,4 @@ services:
     volumes:
       - ./src:/opt/
     working_dir: /opt/
+    entrypoint: []
