@@ -1,5 +1,22 @@
 {
-  extends: ["config:base"],
+  extends: ["config:recommended"],
   automerge: true,
   labels: ["renovate"],
+  customManagers: [
+    // Manage "terraform_version" value of hashicorp/setup-terraform action.
+    {
+      customType: "regex",
+      managerFilePatterns: ["/^\\.github/.*\\.ya?ml$/"],
+      matchStrings: ["terraform_version: (?<currentValue>.+)"],
+      depNameTemplate: "hashicorp/terraform",
+      datasourceTemplate: "docker",
+    },
+  ],
+  packageRules: [
+    // Group terraform version updates.
+    {
+      groupName: "hashicorp/terraform",
+      matchPackageNames: ["hashicorp/terraform"],
+    },
+  ],
 }
