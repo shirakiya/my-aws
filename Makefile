@@ -1,5 +1,8 @@
 RUN_CONTEXT ?= docker compose run --rm terraform
 
+shell:
+	$(RUN_CONTEXT) sh
+
 init:
 	$(RUN_CONTEXT) terraform init
 
