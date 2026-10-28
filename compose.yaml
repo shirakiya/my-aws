@@ -1,6 +1,6 @@
 services:
   terraform:
-    image: hashicorp/terraform:1.17.0
+    image: hashicorp/terraform:1.17.1
     container_name: my-aws-terraform
     environment:
       - AWS_ACCESS_KEY_ID
